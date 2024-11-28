@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast sobre Neurociencia y Salud Cerebral</title>
+    <link rel="stylesheet" href="ccs/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="background-color: rgba(255, 255, 255, 0.8);">
+        <div class="container">
+            <a class="navbar-brand" href="#">Podcast de Neurociencia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#temas">Temas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-dra-vargas">Sobre la Dra. Vargas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#escuchar-podcast">Escuchar Podcast</a>
+                    </li>
+                    <!-- Nueva opción para ir a la sección de Contactos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contactos">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Sección de Inicio -->
+        <header class="header" id="inicio">
+            <div class="header-content">
+                <h1>Descubre los Misterios del Cerebro</h1>
+                <p>Con la Dra. Alicia Vargas, especialista en neurociencia, salud cerebral y conducta humana.</p>
+            </div>
+        </header>
+
+        <!-- Sección de Temas Principales -->
+        <div class="section" id="temas">
+            <h2>Temas Principales del Podcast</h2>
+            <p>Sumérgete en el fascinante mundo del cerebro. Aquí algunos de los temas que exploraremos:</p>
+            <ul class="topics-list">
+                <li>¿Por qué el cerebro es adicto al placer?</li>
+                <li>Cinco neuroprotectores esenciales para un cerebro sano</li>
+                <li>El impacto de la alimentación y el sueño en la salud mental</li>
+                <li>Adolescencia y maduración del cerebro: ¿cuándo crecemos realmente?</li>
+                <li>Cómo el uso de tecnología influye en nuestro pensamiento crítico</li>
+                <li>Claves para manejar el estrés a través del mindfulness</li>
+                <li>El ejercicio físico y su papel en la creación de nuevas neuronas</li>
+                <li>Importancia de las relaciones sociales en el bienestar mental</li>
+            </ul>
+        </div>
+
+        <!-- Sección Sobre la Dra. Vargas -->
+        <div class="section" id="sobre-dra-vargas">
+            <h2>Sobre la Dra. Alicia Vargas</h2>
+            <p>La Dra. Vargas, experta en neurociencia cognitiva, lleva más de 15 años explorando el funcionamiento cerebral y los factores que afectan nuestra salud mental. Únete a su podcast para conocer sus conocimientos y aprender a optimizar tu salud cerebral.</p>
+        </div>
+
+        <!-- Sección Comunidad con Formulario y Podcast -->
+        <div class="section community" id="escuchar-podcast">
+            <h2>¡Forma Parte de Nuestra Comunidad!</h2>
+            <p>Descubre un espacio exclusivo donde puedes interactuar, aprender y compartir tu pasión por la neurociencia. ¡Únete a nosotros hoy mismo!</p>
+            <a href="https://youtu.be/cgB-vM2xRMU" class="cta-button">Escuchar el Podcast</a>
+        
+            <!-- Formulario de contacto -->
+            <div class="form-container">
+                <h3>Contáctanos</h3>
+                <form id="contact-form" action="send_message.php" method="POST">
+                    <label for="name">Tu Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">Tu Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="message">Tu Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+        
+                    <button type="submit" class="cta-button">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Sección de Contactos -->
+        <section id="contactos">
+            <h2>Contactos</h2>
+            <div class="contactos-container">
+                <div class="contacto-item">
+                    <h3>Email</h3>
+                    <p>condorigabriela1702@gnail.com</p>
+                </div>
+                <div class="contacto-item">
+                    <h3>Teléfono</h3>
+                    <p>+109 68140210</p>
+                </div>
+                <div class="contacto-item">
+                    <h3>Dirección</h3>
+                    <p>calle pascoe.Av 16 de julio</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 NEUROCIENCIA. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com"><img src="logo/facebook.jpg" alt="Facebook" /></a>
+                <a href="https://instagram.com"><img src="logo/instagram.jpg" alt="Instagram" /></a>
+                <a href="https://x.com"><img src="logo/twitter.jpg" alt="X" /></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,463 @@
+/* Importar tipografía estilo libro */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+}
+/* Estilo general */
+body {
+    font-family: 'Merriweather', serif;
+    color: #83227b;
+    background: linear-gradient(135deg, #f8e8ff, #e3c8f6); /* Gradiente suave en tonos lilas */
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ajustar espacio superior para que la sección no quede debajo de la barra de navegación */
+#sobre-dra-vargas {
+    margin-top: 70px; /* Ajusta este valor según la altura de tu barra de navegación */
+}
+/* Contenedor principal */
+.container {
+    max-width: 800px; /* Un poco más amplio para mayor espacio */
+    margin: 0 auto;
+    padding: 25px;
+    background: linear-gradient(135deg, #f3e9ff, #e8d7ff); /* Gradiente en tonos lilas */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más suave y pronunciada */
+    border-radius: 12px; /* Bordes más redondeados */
+    border: 2px solid #c9a9e8; /* Delicado borde en tono lila */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Ligeramente elevado al pasar el cursor */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Mayor sombra al hover */
+}
+.header-content h1 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante para títulos */
+    font-size: 3em; /* Tamaño destacado */
+    font-weight: bold; /* Resalta el título */
+    color: #fdf5e6; /* Contraste suave con el fondo */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Sombra para profundidad */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+    line-height: 1.2; /* Espaciado entre líneas */
+    margin: 0 auto;
+    max-width: 700px; /* Restringe el ancho para mejorar la legibilidad */
+}
+
+.header-content p {
+    font-family: 'Merriweather', serif; /* Fuente complementaria para subtítulos */
+    font-size: 1.4em; /* Tamaño mayor para destacar */
+    color: #eae0c8; /* Tono suave y cálido */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+    letter-spacing: 1px; /* Espaciado adicional */
+    line-height: 1.8; /* Mejor separación entre líneas */
+    margin: 15px auto;
+    max-width: 600px; /* Ancho ajustado para un diseño limpio */
+}
+
+
+/* Encabezado con imagen de fondo */
+.header {
+    background-image: url(../img/cerebro5.jpg); /* Cambia esta URL por una imagen adecuada */
+    background-size: cover;
+    background-position: center;
+    color: #fdf5e6;
+    text-align: center;
+    padding: 90px 20px;
+    position: relative;
+    border-bottom: 3px solid #b89a6e;
+    border-radius: 8px 8px 0 0;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px 8px 0 0;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Menú de navegación */
+.navbar {
+    position: fixed; /* Fijo en la parte superior para que siempre sea visible */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #8e44ad, #6c3483); /* Gradiente en tonos morados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para un efecto flotante */
+    padding: 15px 30px;
+    border-bottom: 3px solid #5e3370; /* Llamativo borde inferior */
+    transition: background-color 0.4s ease;
+}
+
+.navbar:hover {
+    background: linear-gradient(90deg, #a569bd, #7d3c98); /* Cambia el gradiente al pasar el cursor */
+}
+
+/* Enlaces de navegación */
+.nav-link {
+    color: #4a1f45 !important; /* Texto claro sobre fondo oscuro */
+    font-weight: bold;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 1.1em;
+    margin: 0 15px;
+    padding: 8px 12px;
+    border-radius: 6px; /* Bordes redondeados */
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ffffff !important; /* Cambia a blanco puro */
+    background-color: #5e3370; /* Fondo más oscuro al hover */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4); /* Sombra ligera */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Estilo único para el enlace activo */
+.nav-link.active {
+    color: #ffffff !important;
+    background-color: #8e44ad; /* Color de fondo resaltado */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Ajustes responsivos para dispositivos pequeños */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .nav-link {
+        font-size: 1em; /* Texto más pequeño en pantallas pequeñas */
+        margin: 0 10px;
+    }
+}
+
+
+.section {
+    margin: 30px 0;
+    padding: 25px;
+    background: linear-gradient(135deg, #f9e8ff, #f2d6ff); /* Gradiente suave en tonos lilas */
+    border-left: 8px solid #8e44ad; /* Borde llamativo */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    position: relative;
+    overflow: hidden; /* Para que la imagen no se salga del contenedor */
+}
+
+/* Imagen decorativa */
+.section::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 150px;
+    height: 150px;
+    background-image: url('../img/decorativo.jpg'); /* URL de la imagen decorativa */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Transparencia para no distraer */
+    transform: rotate(-15deg); /* Rotación para efecto visual */
+}
+
+/* Título */
+.section h2 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-size: 2em;
+    color: #6c3483;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #8e44ad;
+    padding-bottom: 5px;
+    letter-spacing: 1.2px;
+}
+
+/* Texto descriptivo */
+.section p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2em;
+    color: #5d3c6c;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Lista de temas */
+.topics-list {
+    list-style-type: none; /* Quitar el estilo de lista predeterminado */
+    padding-left: 0;
+    color: #4a3a4d;
+}
+
+.topics-list li {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1em;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(206, 147, 216, 0.2); /* Fondo lila claro */
+    border-left: 5px solid #8e44ad; /* Línea decorativa */
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.topics-list li:hover {
+    background: #d7bde2; /* Fondo más oscuro al pasar el cursor */
+    transform: translateX(5px); /* Pequeño movimiento hacia la derecha */
+}
+
+/* Sección "Únete a Nuestra Comunidad" */
+.section.community {
+    margin: 30px 0;
+    padding: 40px;
+    background: radial-gradient(circle at center, #f7e6ff, #d9a7e3);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estrella decorativa */
+.section.community::before {
+    content: '★';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.2);
+    z-index: 0;
+    animation: spin 10s linear infinite; /* Rotación suave */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Título */
+.section.community h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #6c3483;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto descriptivo */
+.section.community p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2em;
+    color: #502d6d;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+}
+
+/* Botón de acción */
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #8e44ad, #6c3483);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para el formulario */
+.form-container {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-container h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: #6c3483;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-container label {
+    font-size: 1.1em;
+    color: #502d6d;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #6c3483;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #502d6d;
+    background-color: #fff;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container button {
+    background: linear-gradient(90deg, #8e44ad, #6c3483);
+    color: #fff;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.form-container button:hover {
+    background: linear-gradient(90deg, #6c3483, #8e44ad);
+    transform: translateY(-2px);
+}
+
+/* Estilo de la sección de contactos */
+#contactos {
+    background-color: #f3e6f1; /* Lila suave de fondo */
+    color: #5a3d7e; /* Color lila oscuro para el texto */
+    padding: 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+}
+
+#contactos h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* Fuente más elegante */
+    font-size: 2.5rem;
+    color: #8e44ad; /* Lila más oscuro */
+    margin-bottom: 20px;
+}
+
+.contactos-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contacto-item {
+    flex: 1;
+    text-align: center;
+    margin: 20px 0;
+    background-color: #fff; /* Fondo blanco para cada contacto */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra para los items */
+    transition: transform 0.3s ease;
+}
+
+.contacto-item:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.contacto-item h3 {
+    color: #8e44ad; /* Título con lila oscuro */
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.contacto-item p {
+    font-family: 'Arial', sans-serif;
+    color: #6c4f9e; /* Lila suave para el texto */
+    font-size: 1rem;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #6c4f9e; /* Fondo lila oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    border-top: 5px solid #8e44ad; /* Borde superior lila más oscuro */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons img {
+    width: 35px;
+    height: auto;
+    margin: 0 15px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2) rotate(10deg); /* Efecto de zoom y rotación al pasar el mouse */
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+        font-size: 0.9em; /* Texto más pequeño */
+    }
+
+    .nav-link {
+        font-size: 1em;
+        margin: 0 10px;
+    }
+}
+
